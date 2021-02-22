@@ -1,0 +1,8 @@
+Options -Indexes 
+RewriteEngine On
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)\.html$ /item.php?parentcategorie=$1&categorie=$2&fx=$3 [L]
+RewriteRule ^([^/]*)/$ /cat.php?parentcategorie=$1 [L]
+RewriteRule ^([^/]*)/([^/]*)/$ /subcat.php?parentcategorie=$1&categorie=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)/([^/]*)\.html$ /page.php?parentcategorie=$1&categorie=$2&fx=$3&img=$4 [L]
+SetEnvIfNoCase User-Agent "^libwww-perl*" block_bad_bots
+Deny from env=block_bad_bots

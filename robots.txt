@@ -1,0 +1,6 @@
+User-agent: *
+disallow: /effects/
+disallow: /inc/
+disallow: /props/
+disallow: /result/
+disallow: /uploads/
